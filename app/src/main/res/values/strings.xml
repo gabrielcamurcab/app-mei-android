@@ -8,4 +8,5 @@
     <string name="value_example">R$ 0,00</string>
     <string name="apply_button">Aplicar</string>
     <string name="value">Valor</string>
+    <string name="erro_subtracao">Valor a ser subtraído é maior que o atual.</string>
 </resources>

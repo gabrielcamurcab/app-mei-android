@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.NumberPicker
 import android.widget.RadioGroup
 import android.widget.TextView
+import android.widget.Toast
 import java.util.Calendar
 
 const val PREFS_FILE = "app_prefs"
@@ -27,7 +28,14 @@ class SharedPrefsUtil(private val context: Context) {
         val currentBalance = getBalance(year)
 
         val newBalance = currentBalance - value
-        sharedPreferences.edit().putFloat("$year", newBalance).apply()
+
+        if (newBalance >= 0) {
+            sharedPreferences.edit().putFloat("$year", newBalance).apply()
+        } else {
+            val toast = Toast.makeText(context, "Valor a ser subtraído maior que o atual", Toast.LENGTH_SHORT)
+            toast.show()
+        }
+
     }
 
     fun getBalance(year: Int): Float {
