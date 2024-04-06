@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MEI</string>
+    <string name="credit_radio_button">Crédito</string>
+    <string name="debit_radio_button">Débito</string>
+    <string name="cash_radio_button">Dinheiro</string>
+    <string name="add_radio_button">Adicionar</string>
+    <string name="remove_radio_button">Remover</string>
+    <string name="value_example">R$ 0,00</string>
+    <string name="apply_button">Aplicar</string>
+    <string name="value">Valor</string>
+</resources>
